@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --background: 220 20% 97%;
+    --foreground: 224 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 30% 10%;
+    --primary: 250 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 224 30% 15%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 270 70% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 250 84% 60%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 230 25% 6%;
+    --foreground: 220 20% 96%;
+    --card: 230 22% 10%;
+    --card-foreground: 220 20% 96%;
+    --primary: 252 92% 72%;
+    --primary-foreground: 230 25% 8%;
+    --secondary: 230 18% 14%;
+    --secondary-foreground: 220 15% 92%;
+    --muted: 230 16% 16%;
+    --muted-foreground: 220 12% 62%;
+    --accent: 280 75% 65%;
+    --accent-foreground: 230 25% 8%;
+    --border: 230 16% 18%;
+    --input: 230 16% 18%;
+    --ring: 252 92% 72%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.06];
+  }
+
+  .glass-strong {
+    @apply border border-white/15 bg-white/10 backdrop-blur-2xl dark:border-white/10 dark:bg-white/[0.08];
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .glow-ring {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.25),
+      0 0 40px -10px hsl(var(--primary) / 0.45);
+  }
+}
