@@ -35,9 +35,7 @@ function SectionFallback() {
 }
 
 function profilePhotoOgUrl(): string {
-  const base = PERSONAL.publicSiteUrl?.replace(/\/$/, '')
-  if (base) return `${base}/profile-photo.png`
-  return '/profile-photo.png'
+  return PERSONAL.profilePhotoUrl
 }
 
 export function HomePage() {

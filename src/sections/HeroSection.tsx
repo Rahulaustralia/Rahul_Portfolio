@@ -203,7 +203,7 @@ export function HeroSection() {
           <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-gradient-to-br from-card/90 to-card/40 p-1 shadow-2xl backdrop-blur-2xl dark:border-white/10">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-muted">
               <img
-                src="/profile-photo.png"
+                src={PERSONAL.profilePhotoUrl}
                 alt={`${PERSONAL.name} — profile photo`}
                 className="h-full w-full object-cover object-top"
               />

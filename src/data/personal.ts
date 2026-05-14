@@ -1,5 +1,5 @@
 export const PERSONAL = {
-  /** Full origin for OG/Twitter images (no trailing slash). Set when deployed, e.g. https://yoursite.vercel.app */
+  /** Site origin when deployed (no trailing slash), e.g. https://yoursite.vercel.app — for canonical links if needed */
   publicSiteUrl: import.meta.env.VITE_SITE_URL as string | undefined,
   name: 'Rahul Pandey',
   role: 'Frontend Developer | React Developer | UI Engineer',
@@ -10,6 +10,9 @@ export const PERSONAL = {
   linkedin: 'https://linkedin.com/in/rahul-pandey-b325232b7',
   github: 'https://github.com/Rahulaustralia',
   githubUsername: 'Rahulaustralia',
+  /** Stable HTTPS URL for hero + social previews (Cloudinary or CDN; not tied to deploy host) */
+  profilePhotoUrl:
+    'https://res.cloudinary.com/ddi5jridv/image/upload/f_auto,q_auto/Profile_Photo_c3zfct',
   /** Public URL (file lives in `public/`) for the hero Download Resume action */
   resumePath: '/Rahul_Pandey_Resume.pdf',
   resumeDownloadFilename: 'Rahul_Pandey_Resume.pdf',
